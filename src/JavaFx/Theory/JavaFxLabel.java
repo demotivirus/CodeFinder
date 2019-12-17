@@ -1,35 +1,36 @@
-package JavaFx;
+package JavaFx.Theory;
 
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 
-public class AddImage extends Application{
+public class JavaFxLabel extends Application{
     public static void main(String[] args) {
-        Application.launch();
+        launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        String fileName = "D:\\IdeaProjectGit\\CodeFinder\\src\\JavaFx\\Images\\JavaFX-Tutorial.jpg";
+        String fileName = "D:\\IdeaProjectGit\\CodeFinder\\src\\JavaFx\\Images\\java-icon-16.jpg";
         Image image = new Image(new FileInputStream(fileName));
         ImageView imageView = new ImageView(image);
 
-        imageView.setFitHeight(300);
-        imageView.setFitWidth(500);
+        Label label = new Label("Text & icon");
+        label.setGraphic(imageView);
 
-        Group group = new Group();
-        Scene scene = new Scene(group, 500, 300);
+        FlowPane root = new FlowPane();
+        root.getChildren().addAll(label);
 
-        group.getChildren().addAll(imageView);
+        Scene scene = new Scene(root, 500, 300);
 
-        primaryStage.setScene(scene);
         primaryStage.setTitle("Demo program");
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 }

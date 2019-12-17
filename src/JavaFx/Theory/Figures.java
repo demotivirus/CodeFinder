@@ -1,4 +1,4 @@
-package JavaFx;
+package JavaFx.Theory;
 
 import javafx.application.Application;
 import javafx.scene.Group;
