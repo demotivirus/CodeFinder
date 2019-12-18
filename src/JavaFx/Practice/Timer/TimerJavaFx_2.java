@@ -44,7 +44,7 @@ public class TimerJavaFx_2 extends Application{
         root.setVgap(10);
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Timer v.1 :)");
+        primaryStage.setTitle("Timer v.1.01 :)");
         primaryStage.show();
     }
 
@@ -56,7 +56,7 @@ public class TimerJavaFx_2 extends Application{
 
         NestedTimer(){
             getChildren().addAll(seconds);
-            Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), lambda -> timer()));
+            Timeline animation = new Timeline(new KeyFrame(Duration.millis(500), lambda -> timer()));
             animation.setCycleCount(Timeline.INDEFINITE);
             animation.play();
         }
@@ -68,7 +68,7 @@ public class TimerJavaFx_2 extends Application{
                 intMinutes = 0;
                 intHourse++;
             }
-            else if(intSeconds == 60){
+            else if(intSeconds == 59){
                 intSeconds = 0;
                 intMinutes++;
             }
