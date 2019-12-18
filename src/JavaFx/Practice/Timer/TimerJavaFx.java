@@ -1,4 +1,4 @@
-package JavaFx.Practice;
+package JavaFx.Practice.Timer;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
