@@ -56,7 +56,7 @@ public class TimerJavaFx_2 extends Application{
 
         NestedTimer(){
             getChildren().addAll(seconds);
-            Timeline animation = new Timeline(new KeyFrame(Duration.millis(500), lambda -> timer()));
+            Timeline animation = new Timeline(new KeyFrame(Duration.seconds(1), lambda -> timer()));
             animation.setCycleCount(Timeline.INDEFINITE);
             animation.play();
         }
