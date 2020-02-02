@@ -1,4 +1,4 @@
-package Cycles;
+package Conditions;
 
 //char byte short int String enum
 public class Switch {
