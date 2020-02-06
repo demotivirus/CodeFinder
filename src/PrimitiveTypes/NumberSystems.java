@@ -19,5 +19,12 @@ public class NumberSystems {
         System.out.println(x);
         System.out.println(y);
         System.out.println(z);
+
+        double doubleBin = 0b11000001_01001000_000;
+        double doubleOctal = 0_7635.9;
+        double doubleHex = 0x98271;
+        System.out.println(doubleBin);
+        System.out.println(doubleOctal);
+        System.out.println(doubleHex);
     }
 }
