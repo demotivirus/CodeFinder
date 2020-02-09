@@ -4,6 +4,14 @@ public class Inspector implements MailService{
 
     @Override
     public Sendable processMail(Sendable mail) {
-        return null;
+        if (mail.getClass() == MailPackage.class) {
+            Package pckg = ((MailPackage) mail).getContent();
+            String str = pckg.getContent();
+            if (str.contains("stones"))
+                throw new StolenPackageException();
+            else if (str.contains("banned substance") || str.contains("weapons"))
+                throw new IllegalPackageException();
+        }
+        return mail;
     }
 }
