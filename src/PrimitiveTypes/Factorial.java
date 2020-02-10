@@ -8,6 +8,7 @@ public class Factorial {
         System.out.println(factorial(6));
         System.out.println(recursFactorial(6));
         System.out.println(bigFactorial(100));
+        System.out.println(bigRecFactorial(100));
     }
 
     public static int factorial(int n) {
@@ -27,5 +28,10 @@ public class Factorial {
         for (int i = 1; i <= n; i++)
             big = big.multiply(BigInteger.valueOf(i));
         return big;
+    }
+
+    public static BigInteger bigRecFactorial(int n){
+        if (n == 0) return BigInteger.ONE;
+        return bigRecFactorial(n - 1).multiply(BigInteger.valueOf(n));
     }
 }

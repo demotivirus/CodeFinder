@@ -31,10 +31,10 @@ public class Example_04 {
         System.out.println('A' + "12");
     }
 
-    public static char charExpression(int a){
-        char slash = '\\';
-        int res = (int) slash + a;
-        return slash = (char) res;
+    public static char charExpression(int a) {
+//        char slash = '\\';
+//        int res = (int) slash + a;
+        return (char) ('\\' + a);
     }
 
 
