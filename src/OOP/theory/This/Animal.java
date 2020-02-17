@@ -1,8 +1,8 @@
 package OOP.theory.This;
 
 public class Animal {
-    private String name;
-    private int age;
+    protected String name;
+    protected int age;
 
     public void setName(String name){
         this.name = name;
