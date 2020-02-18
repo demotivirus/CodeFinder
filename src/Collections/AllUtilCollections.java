@@ -14,7 +14,7 @@ public class AllUtilCollections {
         //========LIST=========
         List<Integer> arrayList = new ArrayList<>();
         List<Integer> linkedList = new LinkedList<>();
-        List<Integer> stack = new Stack<>();
+        //List<Integer> stack = new SortCollection<>();
         List<Integer> vector = new Vector<>();
 
         //========QUEUE=========
