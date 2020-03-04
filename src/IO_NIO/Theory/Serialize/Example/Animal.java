@@ -1,4 +1,4 @@
-package IO_NIO.Theory.Serialize;
+package IO_NIO.Theory.Serialize.Example;
 
 import java.io.Serializable;
 import java.util.Objects;
