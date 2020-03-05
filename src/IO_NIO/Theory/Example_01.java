@@ -11,13 +11,13 @@ public class Example_01 {
     }
 
     public static int sumOfStream(InputStream inputStream) throws IOException {
-        byte res;
-        int read = 0;
-        int sum = 1;
-        while (read != -1) {
-            read = inputStream.read();
-            res = (byte) read;
-            sum += res;
+        //byte res;
+        int read;
+        int sum = 0;
+        while ((read = inputStream.read()) != -1) {
+            //System.out.println(read = inputStream.read());
+            //res = (byte) read;
+            sum += (byte) read;
         }
         return sum;
     }

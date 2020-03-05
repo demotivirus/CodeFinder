@@ -12,14 +12,15 @@ public class Example_03 {
     }
 
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        String str;
+        StringBuilder stringBuilder = new StringBuilder();
         Reader reader = new InputStreamReader(inputStream, charset);
         Writer writer = new StringWriter();
         int res;
         while ((res = reader.read()) != -1){
             writer.write(res);
         }
-        str = writer.toString();
-        return str;
+        stringBuilder.append(writer);
+        //str = writer.toString();
+        return stringBuilder.toString();
     }
 }
