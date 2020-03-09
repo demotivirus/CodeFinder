@@ -22,6 +22,10 @@ public class AllUtilCollections {
         Queue<Integer> linkedList2 = new LinkedList<>();
         Queue<Integer> priorityQueue = new PriorityQueue<>();
 
+        //========DEQUE=========
+        Deque<Integer> arrayDeque = new ArrayDeque<>();
+        Deque<Integer> linkedList3 = new LinkedList<>();
+
         //========Map=========
         Map<Color, Color> enumMap = new EnumMap<>(Color.class);
         Map<Integer, Integer> hashMap = new HashMap<>();

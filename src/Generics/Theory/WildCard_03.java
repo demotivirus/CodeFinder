@@ -15,7 +15,7 @@ public class WildCard_03 {
         nums.add(8);
         System.out.println(nums.get(1));
 
-        List<? extends  Number> numbers = integers;
+        List<? extends Number> numbers = integers;
         System.out.println(numbers.get(1));
         //numbers.add(9);
     }

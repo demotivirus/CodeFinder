@@ -1,6 +1,7 @@
 package Collections.List.Practice;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -28,9 +29,12 @@ public class ArrayVsLinked {
 
         start(arrayList, "remove");
         start(linkedList, "remove");
+
+        start(arrayList, "get", 10000);
+        start(linkedList, "get", 10000);
     }
 
-    public static <T> void start(List<Integer> list, String meth){
+    public static void start(List<? super Integer> list, String meth){
         getTimeStart();
         fori(100_000, list, meth);
         getTimeEnd();
@@ -40,7 +44,7 @@ public class ArrayVsLinked {
             System.out.println("======================");
     }
 
-    public static <T> void start(List<Integer> list, String meth, int index){
+    public static void start(List<? super Integer> list, String meth, int index){
         getTimeStart();
         fori(100_000, list, meth, index);
         getTimeEnd();
@@ -50,16 +54,6 @@ public class ArrayVsLinked {
             System.out.println("======================");
     }
 
-//    public static <T> void getTimeAdd(List<Integer> list){
-//        getTimeStart();
-//        fori(1_000_000, list, "add");
-//        getTimeEnd();
-//        getTime();
-//    }
-
-    private static long getTimeStart(){
-        return start = System.currentTimeMillis();
-    }
 
     private static long getTimeEnd(){
         end = System.currentTimeMillis();
@@ -71,7 +65,7 @@ public class ArrayVsLinked {
         System.out.println(time);
     }
 
-    private static void fori(int iterators, List<Integer> list, String meth){
+    private static void fori(int iterators, List<? super Integer> list, String meth){
         for (int i = 0; i < iterators; i++) {
             if (meth.equals("add"))
                 list.add(i);
@@ -82,10 +76,16 @@ public class ArrayVsLinked {
         }
     }
 
-    private static void fori(int iterators, List<Integer> list, String meth, int index){
+    private static void fori(int iterators, List<? super Integer> list, String meth, int index){
         for (int i = 0; i < iterators; i++) {
             if (meth.equals("add"))
                 list.add(index, i);
+            else if (meth.equals("get"))
+                list.get(index);
         }
+    }
+
+    private static long getTimeStart(){
+        return start = System.currentTimeMillis();
     }
 }
