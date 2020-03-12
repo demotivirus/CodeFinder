@@ -1,4 +1,4 @@
-package Lambdas;
+package Lambdas.Theory.Example_03;
 
 import java.util.Objects;
 import java.util.function.Function;

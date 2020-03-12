@@ -2,14 +2,14 @@ package Arrays.Practrice;
 
 import java.util.Arrays;
 
-class DynamicArray<T> {
+class DynamicArray<T extends Integer> {
     private T[] arr;
     //private Object[] arr;
     private int min_capacity = 10;
     private int size;
 
     public DynamicArray() {
-        this.arr = (T[]) new Object[min_capacity];
+        this.arr = (T[]) new Integer[min_capacity];
     }
 
     public void add(T el) {
@@ -31,6 +31,6 @@ class DynamicArray<T> {
     }
 
     public T get(int index) {
-        return (T) arr[index];
+        return arr[index];
     }
 }

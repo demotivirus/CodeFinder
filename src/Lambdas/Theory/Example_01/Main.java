@@ -1,4 +1,4 @@
-package Lambdas.Example_01;
+package Lambdas.Theory.Example_01;
 
 import java.util.function.UnaryOperator;
 

@@ -1,4 +1,4 @@
-package Lambdas.Example_02;
+package Lambdas.Theory.Example_02;
 
 @FunctionalInterface
 public interface NumberGenerator <T extends Number>{

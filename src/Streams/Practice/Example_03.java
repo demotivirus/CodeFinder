@@ -1,4 +1,4 @@
-package Streams;
+package Streams.Practice;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

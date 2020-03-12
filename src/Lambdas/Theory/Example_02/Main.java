@@ -1,6 +1,4 @@
-package Lambdas.Example_02;
-
-import java.util.function.IntPredicate;
+package Lambdas.Theory.Example_02;
 
 public class Main {
     public static void main(String[] args) {
