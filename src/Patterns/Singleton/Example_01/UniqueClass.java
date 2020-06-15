@@ -1,4 +1,4 @@
-package Patterns.Singleton;
+package Patterns.Singleton.Example_01;
 
 public class UniqueClass {
     private static UniqueClass uniqueClass;
