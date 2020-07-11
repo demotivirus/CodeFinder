@@ -42,7 +42,7 @@ public class SearchPopularWords{
         Set<String> collections = new TreeSet<>();
 
         for (Map.Entry<String, Integer> item : map.entrySet()){
-            if (item.getValue() < 10 || item.getValue() > 600)
+            if (item.getValue() < 10 || item.getValue() > 100)
                 continue;
             else{
                 collections.add(item.getValue() + " " + item.getKey());

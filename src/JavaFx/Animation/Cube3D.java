@@ -1,4 +1,4 @@
-package JavaFx.Animaion;
+package JavaFx.Animation;
 
 import javafx.animation.RotateTransition;
 import javafx.application.Application;

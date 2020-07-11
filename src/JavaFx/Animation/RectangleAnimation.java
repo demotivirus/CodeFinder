@@ -1,4 +1,4 @@
-package JavaFx.Animaion;
+package JavaFx.Animation;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
@@ -6,7 +6,6 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.TriangleMesh;
 import javafx.stage.Stage;
 
 public class RectangleAnimation extends Application{
