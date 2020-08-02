@@ -5,19 +5,23 @@ import java.util.Arrays;
 public class Operations {
 
     public void printAllInfo(int[] arr){
+        System.out.println("==================================================================");
         printEven(arr);
         printOdd(arr);
-        System.out.println("=================================");
+        System.out.println("==================================================================");
         printMin(arr);
         printMax(arr);
-        System.out.println("=================================");
+        System.out.println("==================================================================");
         printNumDivisionTo3(arr);
         printNumDivisionTo9(arr);
         printNumDivision5And7(arr);
-        System.out.println("=================================");
+        System.out.println("==================================================================");
         printBubbleSortUp(arr);
         printBubbleSortDown(arr);
-        System.out.println("=================================");
+        System.out.println("==================================================================");
+        printAll3LengthNumbers(arr);
+        printAll3LengthSameNumbers(arr);
+        System.out.println("==================================================================");
     }
 
     public void printEven(int[] arr) {
@@ -86,7 +90,7 @@ public class Operations {
     public void printNumDivisionTo3(int[] arr){
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 3 == 0 & arr[i] != 0)
+            if (arr[i] % 3 == 0 && arr[i] != 0)
                 count++;
         }
 
@@ -94,7 +98,7 @@ public class Operations {
 
         int point = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 3 == 0 & arr[i] != 0) {
+            if (arr[i] % 3 == 0 && arr[i] != 0) {
                 res[point] = arr[i];
                 point++;
             }
@@ -105,7 +109,7 @@ public class Operations {
     public void printNumDivisionTo9(int[] arr){
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 9 == 0 & arr[i] != 0)
+            if (arr[i] % 9 == 0 && arr[i] != 0)
                 count++;
         }
 
@@ -113,7 +117,7 @@ public class Operations {
 
         int point = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 9 == 0 & arr[i] != 0) {
+            if (arr[i] % 9 == 0 && arr[i] != 0) {
                 res[point] = arr[i];
                 point++;
             }
@@ -124,7 +128,7 @@ public class Operations {
     public void printNumDivision5And7(int[] arr){
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 5 == 0 & arr[i] % 7 == 0 & arr[i] != 0)
+            if (arr[i] % 5 == 0 && arr[i] % 7 == 0 && arr[i] != 0)
                 count++;
         }
 
@@ -132,7 +136,7 @@ public class Operations {
 
         int point = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] % 5 == 0 & arr[i] % 7 == 0 & arr[i] != 0) {
+            if (arr[i] % 5 == 0 && arr[i] % 7 == 0 && arr[i] != 0) {
                 res[point] = arr[i];
                 point++;
             }
@@ -166,5 +170,48 @@ public class Operations {
             }
         }
         System.out.println("Sort to down " + Arrays.toString(arr));
+    }
+
+    public void printAll3LengthNumbers(int[] arr){
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 100 && arr[i] < 1000)
+                count++;
+        }
+
+        int[] res = new int[count];
+
+        int point = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 100 && arr[i] < 1000) {
+                res[point] = arr[i];
+                point++;
+            }
+        }
+        System.out.println("All 3 length numbers " + Arrays.toString(res));
+    }
+
+    public void printAll3LengthSameNumbers(int[] arr){
+        int count = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 100 && arr[i] < 1000)
+                if (arr[i] / 100 == arr[i] / 10 % 10)
+                    if (arr[i] / 10 % 10 == arr[i] % 10)
+                        count++;
+        }
+
+        int[] res = new int[count];
+
+        int point = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] >= 100 && arr[i] < 1000)
+                if (arr[i] / 100 == arr[i] / 10 % 10)
+                    if (arr[i] / 10 % 10 == arr[i] % 10){
+                        res[point] = arr[i];
+                        point++;
+                    }
+
+        }
+        System.out.println("All 3 length SAME numbers " + Arrays.toString(res));
     }
 }

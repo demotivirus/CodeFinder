@@ -14,7 +14,7 @@ public class NumberGenerator {
     }
 
     public void printNumbers(){
-        System.out.println(Arrays.toString(saveNumbers));
+        System.out.println("All numbers " + Arrays.toString(saveNumbers));
     }
 
     private int[] randGen(int numbers, int seed){

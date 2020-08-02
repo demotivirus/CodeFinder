@@ -5,7 +5,7 @@ public class Main {
         NumberGenerator generator = new NumberGenerator();
         Operations op = new Operations();
 
-        int[] randomNumbers = generator.getRandomNumbers(50, 1001);
+        int[] randomNumbers = generator.getRandomNumbers(500, 2021);
         generator.printNumbers();
 
         op.printAllInfo(randomNumbers);
