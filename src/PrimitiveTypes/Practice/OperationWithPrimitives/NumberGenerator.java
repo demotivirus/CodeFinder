@@ -8,8 +8,8 @@ public class NumberGenerator {
     private Random random = new Random();
     private int[] saveNumbers;
 
-    public int[] getRandomNumbers(){
-        saveNumbers = randGen();
+    public int[] getRandomNumbers(int numbers, int seed){
+        saveNumbers = randGen(numbers, seed);
         return saveNumbers;
     }
 
@@ -17,10 +17,10 @@ public class NumberGenerator {
         System.out.println(Arrays.toString(saveNumbers));
     }
 
-    private int[] randGen(){
-        int[] arr = new int[20];
+    private int[] randGen(int numbers, int seed){
+        int[] arr = new int[numbers];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = random.nextInt(101);
+            arr[i] = random.nextInt(seed);
         }
         return arr;
     }

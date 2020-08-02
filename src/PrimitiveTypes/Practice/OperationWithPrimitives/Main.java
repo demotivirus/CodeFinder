@@ -5,10 +5,9 @@ public class Main {
         NumberGenerator generator = new NumberGenerator();
         Operations op = new Operations();
 
-        int[] randomNumbers = generator.getRandomNumbers();
+        int[] randomNumbers = generator.getRandomNumbers(50, 1001);
         generator.printNumbers();
 
-        op.getEven(randomNumbers);
-        op.getOdd(randomNumbers);
+        op.printAllInfo(randomNumbers);
     }
 }
